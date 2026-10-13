@@ -53,7 +53,7 @@ listadmin="$botadmin"
 async_media="false"
 
 # Application service host/registration related details.
-avatar="mxc://maunium.net/NeXNQarUbrlYBiPCpprYsRqr"
+avatar="mxc://maunium.net/JxjlbZUlCPULEeHZSwleUXQv"
 ephemeral_events="true"
 username_template="instagram_{{.}}"  # Localpart template of MXIDs for remote users.
                                     # {{.}} is replaced with the internal ID of the user.

@@ -99,9 +99,10 @@ then
 fi
 
 
-if [ -z "$avatar" ]
+# The first versions of this package used the WhatsApp logo as bot avatar
+if [ -z "$avatar" ] || [ "$avatar" == "mxc://maunium.net/NeXNQarUbrlYBiPCpprYsRqr" ]
 then
-  avatar="mxc://maunium.net/NeXNQarUbrlYBiPCpprYsRqr"
+  avatar="mxc://maunium.net/JxjlbZUlCPULEeHZSwleUXQv"
   ynh_app_setting_set --key=avatar --value=$avatar
 fi
 if [ -z "$ephemeral_events" ]

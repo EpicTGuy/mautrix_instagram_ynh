@@ -116,6 +116,8 @@ set__listuser
 set__listrelay
 set__listadmin
 
+configure_double_puppet
+
 #=================================================
 # REGISTER SYNAPSE APP-SERVICE
 #=================================================

@@ -10,6 +10,21 @@ get_synapse_db_name() {
 	ynh_app_setting_get --app="$1" --key=db_name
 }
 
+# Enable double puppeting if the admin registered the shared "doublepuppet" appservice in Synapse
+# (https://docs.mau.fi/bridges/general/double-puppeting.html). Nothing happens otherwise.
+configure_double_puppet() {
+    local doublepuppet_file="/etc/matrix-$synapse_instance/app-service/doublepuppet.yaml"
+    if [ -f "$doublepuppet_file" ]; then
+        local as_token
+        as_token=$(grep "^as_token:" "$doublepuppet_file" | cut -d' ' -f2 | tr -d '"')
+        if [ -n "$as_token" ]; then
+            sed -i "/^double_puppet:/,/^encryption:/{/^        [^ #].*: as_token:/d;}" "$install_dir/config.yaml"
+            sed -i "/^double_puppet:/,/^encryption:/{s/^    secrets:.*/    secrets:\n        $server_name: as_token:$as_token/;}" "$install_dir/config.yaml"
+            ynh_print_info "Double puppeting enabled using $doublepuppet_file"
+        fi
+    fi
+}
+
 #=================================================
 # CONFIG PANEL SETTERS
 #=================================================

@@ -7,7 +7,7 @@ name = "Mautrix Instagram"
 
 description.en = "Matrix / Synapse puppeting bridge for Instagram"
 description.fr = "Passerelle Matrix / Synapse pour Instagram"
-version = "0.2609.0~ynh1"
+version = "0.2610.0~ynh1"
 
 maintainers = []
 
@@ -88,12 +88,12 @@ ram.runtime = "128M"
         in_subdir = false
         extract = false
         rename = "mautrix-instagram"
-        amd64.url = "https://github.com/mautrix/meta/releases/download/v0.2609.0/mautrix-instagram-amd64"
-        amd64.sha256 = "971d78b8bbc9b515f6818f0b19d684110870cbd3cdddd87e1fea6b7c534f71bc"
-        arm64.url = "https://github.com/mautrix/meta/releases/download/v0.2609.0/mautrix-instagram-arm64"
-        arm64.sha256 = "ec7a4454db2c477259c0fe6ee972137d259ad878c3e06e2a97703683110f95ad"
-        armhf.url = "https://github.com/mautrix/meta/releases/download/v0.2609.0/mautrix-instagram-arm"
-        armhf.sha256 = "73e509b81507e8aeacde438b9271641d4382498a22c3d833d7a89968fdf2668e"
+        amd64.url = "https://github.com/mautrix/meta/releases/download/v0.2610.0/mautrix-instagram-amd64"
+        amd64.sha256 = "c3b469ea8c257055ae9e6a5695292686b1c82692761fae2e969eea9a426d94fa"
+        arm64.url = "https://github.com/mautrix/meta/releases/download/v0.2610.0/mautrix-instagram-arm64"
+        arm64.sha256 = "11487c95361eaae640406b74aa892c939822e8b2a2afe7e6b7ed73c28c9ae731"
+        armhf.url = "https://github.com/mautrix/meta/releases/download/v0.2610.0/mautrix-instagram-arm"
+        armhf.sha256 = "1f020c1d3cfeccb6549eb6c874a32554bb764ad06faeda46089fda2359975a52"
 
         autoupdate.strategy = "latest_github_release"
         autoupdate.asset.amd64 = "^mautrix-instagram-amd64$"

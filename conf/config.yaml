@@ -28,9 +28,9 @@ network:
     # Should typing notification bridging be disabled?
     # Bridging typing notifications requires 2 extra connections per user (one for receiving and one for sending),
     # because Meta only employs professional software engineers who make excellent architecture decisions.
-    disable_typing: false
+    disable_typing: __DISABLE_TYPING__
     # Should view-once messages be disabled entirely?
-    disable_view_once: false
+    disable_view_once: __DISABLE_VIEW_ONCE__
     # Log raw Bloks payloads and login responses even at debug level, with any user identifiers or credentials redacted.
     log_redacted_login_responses: false
 
